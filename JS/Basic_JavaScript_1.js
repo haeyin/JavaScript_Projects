@@ -13,3 +13,14 @@ var world = "What a wonderful world.";
 var world = world.fontcolor("green");
 document.write(world);
 'z' + 'sigmund' /*Not sure how expressions work yet*/
+
+
+function My_First_Function() {
+    var str = "The Text iz BLUE!";
+    var result = str.fontcolor("blue");
+    document.getElementById("Blue_Text").innerHTML = result;
+}
+
+function My_Second_Function() {
+    document.getElementById("Time").innerHTML = Date();
+}
