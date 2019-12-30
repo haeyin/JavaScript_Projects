@@ -52,5 +52,5 @@ function FunctionJ() {
 window.alert(Math.random()*50)
 
 function FunctionK() {
-    document.getElementById("MathK").innerHTML = (Math.pow(6,3));
+    document.getElementById("MathK").innerHTML = Math.pow(6,3);
 }
