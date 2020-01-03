@@ -49,7 +49,6 @@ function Element_Nature() {
     document.getElementById("Nested_Function").innerHTML = fire.Element_Name + " is strong against " + fire.Element_Strong + " but weak against " + fire.Element_Weak + ".";
 }
 
-
 function Parent_Function() {
     document.getElementById("Counting").innerHTML = Count();
     function Count() {
