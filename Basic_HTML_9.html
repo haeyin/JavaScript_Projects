@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./CSS/Basic_CSS_1.css">
+        <title>Countdown and Slideshow</title>
+    </head>
+    <body>
+        <!--Slideshow start-->
+
+        <div class="slideshow_container">
+
+            <div class="Separate_Slide fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="./Media/Images/01.jpg" alt="photo1">
+                <div class="Caption">Beach across the city</div>
+            </div>
+
+            <div class="Separate_Slide fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="./Media/Images/02.jpg" alt="photo2">
+                <div class="Caption">Fog-filled hillside</div>
+            </div>
+
+            <div class="Separate_Slide fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="./Media/Images/09.jpg" alt="photo3">
+                <div class="Caption">Icy waterfall</div>
+            </div>
+
+            <div class="Separate_Slide fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="./Media/Images/04.jpg" alt="photo4">
+                <div class="Caption">Serene lake</div>
+            </div>
+
+            <div class="Separate_Slide fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="./Media/Images/05.jpg" alt="photo5">
+                <div class="Caption">Italian cityscape</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+        </div>
+
+        <div id="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <br>
+
+        <!--slideshow end-->
+
+        <p>How many seconds do you want to set your alarm for?</p>
+        <input id="seconds" value=""/>
+        <button onclick="Countdown()">Submit</button>
+        <p id="timer"></p>
+
+        <script src="./JS/Basic_JavaScript_9.js"></script>
+    </body>
+</html>
