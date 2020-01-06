@@ -21,7 +21,7 @@ function age_21() {
     }
     document.getElementById("drink_eligible").innerHTML = text;
 }
-
+ 
 function height_120() {
     var x, text;
     var x = document.getElementById("Height").Value;
