@@ -67,7 +67,7 @@ function return_Name() {
 }
 document.getElementById("Return_friend").innerHTML = return_Name(x);
 
-let Instrument = {
+let Instrument = { //creates an object called 'Instrument'
     name: "Violin",
     brand: "Stradivarious",
     year: "1721",

@@ -1,0 +1,32 @@
+p {
+    text-align: center;
+}
+
+div {
+    border-radius: 10px;
+    background-color: rgb(186, 207, 247);
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text] {
+    width: 100%; /*try and center the box @ 75% when you have time*/
+    padding: 15px 15px;
+    margin: 10px 0; /*space between boxes vertically first, and to the left second*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%; /*try and center the box @ 75% when you have time*/
+    background-color: darkblue;
+    color: white;
+    margin: 15px 0;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
