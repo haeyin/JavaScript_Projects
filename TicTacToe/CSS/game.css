@@ -78,7 +78,7 @@ table tr:nth-child(3) td:nth-child(1) {
 }
 
 .O {
-    transition: transform .3m;
+    transition: transform .3s;
     opacity: 1;
     position: absolute;
     background-image: url(../Images/avatarO.png);
@@ -87,7 +87,7 @@ table tr:nth-child(3) td:nth-child(1) {
     transform: translateY(-100%);
 }
 .X {
-    transition: transform .3m;
+    transition: transform .3s;
     opacity: 1;
     position: absolute;
     background-image: url(../Images/avatarX.png);
@@ -243,7 +243,7 @@ table tr:nth-child(3) td:nth-child(1) {
     border-radius: 10px;
 }
 
-#btnstop:hover {
+#btnStop:hover {
     border: 2px solid rgb(19, 77, 0);
     background-color: rgb(255, 0, 0);
     box-shadow: inset 3px 3px 15px -2px rgba(0,0,0,0.65);
