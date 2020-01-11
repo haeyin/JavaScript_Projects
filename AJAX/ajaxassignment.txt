@@ -1,0 +1,2 @@
+Ajax stands for Asynchronous JavaScript & XML.
+This is a test for the AJAX exercise.

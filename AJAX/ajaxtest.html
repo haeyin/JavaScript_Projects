@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AJAX</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div class="AJAXTest" id="ajaxtest">
+            <button type="button" onclick="ajaxTest()">Click to move on!</button>
+        </div>
+
+        <script>
+            var ajax = new XMLHttpRequest();
+            
+            ajax.open("GET", "ajaxassignment.txt");
+            
+            ajax.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) { 
+                        document.getElementById("ajaxtest").innerHTML = this.responseText;
+                    }
+                }
+            function ajaxTest() {
+                ajax.send();
+            }
+        </script>
+
+    </body>
+</html>
