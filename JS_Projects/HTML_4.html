@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sticky</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./CSS/CSS_2_cnnctd4.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>this</p>
+        <p>is</p>
+        <p>filler</p>
+        <p>that</p>
+        <p>will</p>
+        <p>take</p>
+        <p>up</p>
+        <p>a</p>
+        <p>bunch</p>
+        <p>of</p>
+        <p>space</p>
+        <p>because</p>
+        <p>I</p>
+        <p>need</p>
+        <p>it</p>
+        <p>to</p>
+        <button class="stickybutton" id="btn" onclick="openform()">Open</button>
+
+        <form class="container" id="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Jane Doe" required>
+        
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="jane@email.com" required>
+        
+            <button type="submit" class="enter">Submit</button>
+            <button type="submit" class="cancel" onclick="closeform()">Close</button>
+        </form>
+
+        <!--ask for help w/ jQuery to hide open button onclick
+        <script>
+            $('#btn').hide
+        </script>
+        -->
+        <script src="./JS/JS_4.js"></script>
+    </body>
+</html>

@@ -5,8 +5,12 @@
         <meta http-equiv="content-Type" cntent="text/html" charset="utf-8">
         <meta content="width=device-width,initial-scale=1.0" name="viewport">
         <link rel="stylesheet" type="text/css" href="./Pizza_CSS/Pizza.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <img src="./Images/pizzzaaa1.jpg" alt="pizza" width="100%">
+        </div>
         <div id="menuBG">
             <h1 style="margin: 0 0 0 20px;">Pizza Menu</h1>
 
@@ -48,6 +52,31 @@
                 </div>
             </form>
         </div>
+        <div id="slideshow">
+            <div>
+                <img class="pizzas" src="./Images/pizza_1.png" alt="Pizza1st">
+            </div>
+            <div>
+                <img class="pizzas" src="./Images/pizzzaaa_2.jpg" alt="Pizza2nd">
+            </div>
+            <div>
+                <img class="pizzas" src="./Images/pizzaa_3.jpg" alt="Pizza3rd">
+            </div>
+        </div>
+        <script>
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() {
+                $('#slideshow > div:first')
+                    .fadeOut(1000)
+                    .next()
+                    .fadeIn(1000)
+                    .end()
+                    .appendTo('#slideshow');
+            }, 3000);
+
+        </script>
+
         <script src="./Pizza_JS/Pizza.js"></script>
     </body>
 </html>

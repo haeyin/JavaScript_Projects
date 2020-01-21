@@ -1,0 +1,59 @@
+p {
+    font-size: 25px;
+}
+
+.stickybutton {
+    position: -webkit-sticky;
+    position: sticky;
+    float: right;
+    bottom: 0;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#form {
+    display: none;
+    border: 2px solid darkgray;
+    z-index: 6;
+    float: right;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    right: 0;
+}
+
+.container {
+    padding: 20px;
+    max-width: 300px;
+}
+
+input[type=text], input[type=submit] {
+    width: 70%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: silver;
+    margin: 5px 0 22px 0;    
+}
+
+.enter {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(19, 190, 90);
+    color: white;
+    cursor: pointer;
+}
+.cancel {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}

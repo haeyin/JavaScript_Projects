@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>XML Test</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p id="Band Types"></p>
+
+        <script>
+        
+        var XML_Parser, XML_Document;
+
+        var Band = "<band>" +
+        "<marching>Highschool</marching>" +
+        "<rock>AC/DC</rock>" +
+        "<alternative>Green Day</alternative>" +
+        "<hated>Nickelback</hated>" +
+        "<christian>Skillet</christian>" +
+        "</band>";
+
+        XML_Parser = new DOMParser();
+
+        XML_Document = XML_Parser.parseFromString(Band,"text/xml");
+
+        document.getElementById("Band Types").innerHTML = XML_Document.getElementsByTagName("rock")[0].childNodes[0].nodeValue;
+
+        </script>
+    </body>    
+</html>
