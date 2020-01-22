@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--HEAD-->
+    <head>
+        <title>Clare Shin</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./CSS/CS_Portfolio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+<!--BODY-->
+<body class="Background">
+    <script>
+        document.body.className +- ' fade-out';
+            $(function() {
+                $('body').removeClass('fade-out');
+            });
+    </script>
+
+<!--NAVBAR-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()">Contact</a>
+    </div>
+
+    <div class="cancel" onclick="closeForm()"></div>
+
+<!--HOME-->
+    <div id="Home">
+        <br>
+        <br>
+
+<!--VIDEO-->    
+        <video autoplay muted loop id="bg_video">
+            <source src="./Media/Video/background_video7.mp4" type="video/mp4">
+            <source src="./Media/Video/background_video7.ogg" type="video/ogg">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+<!--VIDEO TEXT-->
+    <div class="Video_Text">
+        <h1 class="Main">Clare's Portfolio</h1>
+            <p class="center">
+                My name is Clare Shin, welcome to my portfolio site! 
+            </p>
+    </div>
+
+<!--SLIDESHOW-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                    <img class="SlideshowImages" src="./Media/Images/profile2squared.jpg">
+                    <div class="text"></div>
+                </div>
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                    <img class="SlideshowImages" src="./Media/Images/HTML_CSS_and_JavaScript.jpeg">
+                    <div class="text">I am trained in HTML, CSS, JavaScript</div>
+                </div>
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                    <img class="SlideshowImages" src="./Media/Images/Python.png">
+                    <div class="text">and yet to train in: Python</div>
+                </div>
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                    <img class="SlideshowImages" src="./Media/Images/C_Sharp_and_Dot_NET.png">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                    <img class="SlideshowImages" src="./Media/Images/SQL_and_Database.jpg">
+                    <div class="text">back-end development, databases, and SQL.</div>
+                </div>
+
+                <div class="Slides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                    <img class="SlideshowImages" src="" >
+                    <div class="text">
+                        <a onclick="openForm()" href="#Contact" style="color: white;">Contact me!</a>
+                    </div>
+                </div>
+
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <br>
+
+            <div style="text-align: center">
+                
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+            var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                    for (i=0; i<slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i=0; i<dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active","");
+                    }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+<!--ABOUT-->
+    <div class="Row" id="About">
+        <div class="Column_1">
+            <img src="./Media/Images/Development.jpg" alt="Laptop">
+        </div>
+        <div class="Column_2">
+            <h1>About</h1>
+                <p>I moved over to software developing from the film industry. With this experience under my belt, I am capable of seeing thing through both an artist's and developer's point of view. I also like to problem solve.</p>
+        </div>
+    </div>
+
+<!--GITHUB-->
+    <div class="Row" id="GitHub">
+        <div class="Column_2">
+            <h1>GitHub</h1>
+                <p>You can take a look at my coding projects on my GitHub profile 
+                <a href="https://github.com/haeyin" target="_blank">here</a>!</p>
+        </div>
+        <div class="Column_1">
+            <a href="https://github.com/haeyin" target="_blank"><img src="Media/Images/GitHub.png" alt="GitHub_img"></a>
+        </div>
+    </div>
+
+<!--CONTACT-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/xgeadenn" method="POST" class="form-container">
+                <h1>Contact</h1>
+                    <label for="name"><strong>Name</strong></label>
+                        <input type="text" placeholder="Your Name Here" name="name" required>
+                    <label for="phone"><strong>Phone</strong></label>
+                        <input type="text" placeholder="Your Phone Number Here" name="phone" required>
+                    <label for="email"><strong>Email</strong></label>
+                        <input type="text" placeholder="Your Email Here" name="email" required>
+                    <label for="message"><strong>Message</strong></label>
+                        <input type="text" placeholder="Type your Message" name="message">
+                    
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./JS/CS_Portfolio.js"></script>
+
+<!--FOOTER-->
+    <footer>
+        <p>
+            <a href="https://www.linkedin.com/in/clareshin/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+
+
+</html>
